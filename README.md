@@ -1,2 +1,2 @@
-# shoping-website
+# shopping-website
 Responsive shopper template 

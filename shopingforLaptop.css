@@ -75,7 +75,7 @@
     }
 
     .fashion .women {
-        background-image: url(./images/women-fashion.jpg);
+        background-image: url(images/women-fashion.jpg);
         background-size: cover;
         display: flex;
         flex-direction: column;
@@ -86,7 +86,7 @@
     }
 
     .fashion .men {
-        background-image: url(./images/men-fashion.jpg);
+        background-image: url(images/men-fashion.jpg);
         background-size: cover;
         display: flex;
         flex-direction: column;
@@ -98,7 +98,7 @@
     }
 
     .fashion .kids {
-        background-image: url(./images/kids-fashion.jpg);
+        background-image: url(images/kids-fashion.jpg);
         background-size: cover;
         display: flex;
         flex-direction: column;
@@ -229,24 +229,24 @@
     }
 
     .first-img {
-        background-image: url("./images/girlwithbag.jpeg");
+        background-image: url("images/girlwithbag.jpeg");
         background-size: cover;
     }
 
     .second-img {
-        background-image: url("./images/printedmansshirt.jpeg");
+        background-image: url("images/printedmansshirt.jpeg");
         background-size: cover;
 
     }
 
     .third-img {
-        background-image: url("./images/basicwomen.jpeg");
+        background-image: url("images/basicwomen.jpeg");
         background-size: cover;
 
     }
 
     .forth-img {
-        background-image: url("./images/girlredtshirt.jpeg");
+        background-image: url("images/girlredtshirt.jpeg");
         background-size: cover;
 
     }
@@ -347,55 +347,55 @@
     }
 
     .image1 {
-        background-image: url("./images/tms-1.jpg");
+        background-image: url("images/tms-1.jpg");
     }
 
     .image2 {
-        background-image: url("./images/tms-2.jpg");
+        background-image: url("images/tms-2.jpg");
     }
 
     .image3 {
-        background-image: url("./images/tms-3.jpg");
+        background-image: url("images/tms-3.jpg");
     }
 
     .image4 {
-        background-image: url("./images/tms-4.jpg");
+        background-image: url("images/tms-4.jpg");
     }
 
     .image5 {
-        background-image: url("./images/tms-5.jpg");
+        background-image: url("images/tms-5.jpg");
     }
 
     .image6 {
-        background-image: url("./images/tms-6.jpg");
+        background-image: url("images/tms-6.jpg");
     }
 
     .image7 {
-        background-image: url("./images/tms-7.jpg");
+        background-image: url("images/tms-7.jpg");
     }
 
     .image8 {
-        background-image: url("./images/tms-8.jpg");
+        background-image: url("images/tms-8.jpg");
     }
 
     .image1:hover {
-        background-image: url("./images/tmsh-1.png");
+        background-image: url("images/tmsh-1.png");
     }
 
     .image2:hover {
-        background-image: url("./images/tmsh-2.png");
+        background-image: url("images/tmsh-2.png");
     }
 
     .image3:hover {
-        background-image: url("./images/tmsh-3.png");
+        background-image: url("images/tmsh-3.png");
     }
 
     .image6:hover {
-        background-image: url("./images/tmsh-1.png");
+        background-image: url("images/tmsh-1.png");
     }
 
     .image7:hover {
-        background-image: url("./images/tmsh-7.png");
+        background-image: url("images/tmsh-7.png");
     }
 
     .prop,
@@ -489,7 +489,7 @@
 
     /* summer collection */
     .summer-collection {
-        background-image: url("./images/summer-collection.png");
+        background-image: url("images/summer-collection.png");
         height: 400px;
         background-size: cover;
         text-align: center;
@@ -603,27 +603,27 @@
     }
 
     .sm1 {
-        background-image: url("./images/sm-1.jpg");
+        background-image: url("images/sm-1.jpg");
     }
 
     .sm2 {
-        background-image: url("./images/sm-2.jpg");
+        background-image: url("images/sm-2.jpg");
     }
 
     .sm3 {
-        background-image: url("./images/sm-3.jpg");
+        background-image: url("images/sm-3.jpg");
     }
 
     .sm4 {
-        background-image: url("./images/sm-4.jpg");
+        background-image: url("images/sm-4.jpg");
     }
 
     .sm5 {
-        background-image: url("./images/sm-5.jpg");
+        background-image: url("images/sm-5.jpg");
     }
 
     .sm6 {
-        background-image: url("./images/sm-6.jpg");
+        background-image: url("images/sm-6.jpg");
     }
 
     .items-card span {

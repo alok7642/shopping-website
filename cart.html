@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Cart</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 20px;
+    }
+    .item {
+      margin-bottom: 10px;
+      border-bottom: 1px solid #ccc;
+      padding-bottom: 10px;
+    }
+    #pay-btn {
+      margin-top: 20px;
+      padding: 10px 20px;
+      background-color: #28a745;
+      color: white;
+      border: none;
+      cursor: pointer;
+      font-size: 16px;
+    }
+  </style>
+</head>
+<body>
+
+  <h2>Your Cart</h2>
+  <div id="cart-items"></div>
+  <h3 id="total"></h3>
+  <button id="pay-btn">Pay Now</button>
+
+  <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
+  <script>
+    const cartItems = JSON.parse(localStorage.getItem('cart')) || [];
+    const cartDiv = document.getElementById('cart-items');
+    const totalSpan = document.getElementById('total');
+
+    let total = 0;
+
+    cartItems.forEach(item => {
+      const div = document.createElement('div');
+      div.classList.add('item');
+      div.innerHTML = `<p><strong>${item.name}</strong> - ₹${item.price}</p>`;
+      cartDiv.appendChild(div);
+      total += parseFloat(item.price);
+    });
+
+    totalSpan.textContent = `Total: ₹${total.toFixed(2)}`;
+
+    document.getElementById('pay-btn').addEventListener('click', function () {
+      if (cartItems.length === 0) {
+        alert("Cart is empty!");
+        return;
+      }
+
+      const options = {
+        key: "rzp_test_YourKeyHere", // 🔑 Replace with your Razorpay Test Key
+        amount: total * 100, // amount in paise
+        currency: "INR",
+        name: "Shopping Website",
+        description: "Test Transaction",
+        image: "https://your-logo-url.com/logo.png", // Optional
+        handler: function (response) {
+          alert("Payment Successful!\nPayment ID: " + response.razorpay_payment_id);
+          localStorage.removeItem('cart');
+          window.location.href = 'index.html';
+        },
+        theme: {
+          color: "#28a745"
+        }
+      };
+
+      const rzp = new Razorpay(options);
+      rzp.open();
+    });
+  </script>
+
+</body>
+</html>

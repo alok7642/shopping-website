@@ -5,60 +5,16 @@
 }
 
 @media screen and (orientation:landscape) {
-    header {
-        display: flex;
-        justify-content: space-around;
-        background-color: rgb(228, 240, 244);
-        padding: 10px;
-        font-family: Arial, Helvetica, sans-serif;
-    }
-    .header-list, .pshop{
-        display: none;
-    }
    
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.third{
+    margin-top: -30px;
+}
 
-    header .first,
-    header .second,
-    header .third {
-    display: flex;
-
-
-    }
-
-    header .first div,
-    header .second div,
-    header .third div {
-        margin-left: 10px;
-        margin-right: 10px;
-
-    }
-
-    .port {
-        display: none;
-    }
-
-    nav {
-        display: flex;
-        justify-content: space-around;
-        margin-top: 25px;
-        font-family: Arial, Helvetica, sans-serif;
-        font-weight: 600;
-    }
-
-    nav .first {
-        font-size: 30px;
-    }
-
-    nav .second,
-    nav .third {
-        display: flex;
-
-    }
-
-    nav .second div,
-    nav .third div {
-        padding-right: 20px;
-    }
 
     aside {
         background-color: black;
@@ -138,7 +94,7 @@
     .all-services {
         display: flex;
         justify-content: space-around;
-        margin-top: 20px;
+        /* margin-top: 20px; */
 
     }
 
@@ -321,8 +277,9 @@
 
     /* all-shoping-items */
     .card {
-        height: 500px;
-        width: 400px;
+        height: 505px;
+        width: 380px;
+        margin-right: 10px;
     }
 
     .image1,
@@ -333,10 +290,10 @@
     .image6,
     .image7,
     .image8 {
-        height: 400px;
-        width: 300px;
+        height: 90%;
+        width: 100%;
         background-size: cover;
-        margin-bottom: 20px;
+        /* margin-bottom: 20px; */
     }
 
     .image1,
@@ -472,6 +429,7 @@
     .row2 {
         display: flex;
         margin: 30px 30px 30px 130px;
+        /* padding:10px; */
     }
 
     /* discover more   */

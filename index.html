@@ -7,11 +7,32 @@
     <title>shoping website</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
-    <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script> -->
 
     <link rel="stylesheet" href="shopingforLaptop.css">
-    <link rel="stylesheet" href="shopingforMobile.css">
-    <!-- <script src="shopping.js"></script> -->
+    <!-- <link rel="stylesheet" href="shopingforMobile.css"> -->
+
+    <script src="https://cdn.jsdelivr.net/npm/emailjs-com@2.4.1/dist/email.min.js"></script>
+
+    <script>
+        function addToCart(name, price) {
+            const cart = JSON.parse(localStorage.getItem('cart')) || [];
+
+            const existingItem = cart.find(item => item.name === name);
+            if (existingItem) {
+                existingItem.quantity += 1;
+            } else {
+                cart.push({ name, price, quantity: 1 });
+            }
+
+            localStorage.setItem('cart', JSON.stringify(cart));
+            alert(`${name} added to cart!`);
+
+            document.querySelector('.cart-btn').textContent = `Cart (${cart.length})`;
+        }
+
+        const cart = JSON.parse(localStorage.getItem('cart')) || [];
+        document.querySelector('.cart-btn').textContent = `Cart (${cart.length})`;
+    </script>
 </head>
 
 <body>
@@ -26,7 +47,9 @@
             <div class="mx-4">Docs</div>
         </div>
         <div class="third">
-            <button class="btn btn-primary bi-cart cart-btn"> cart</button>
+            <a href="cart.html">
+                <button class="btn btn-primary bi-cart cart-btn">Cart (<span id="cart-count">0</span>)</button>
+            </a>
         </div>
     </header>
 
@@ -35,7 +58,6 @@
             <span class="bi bi-lightning-fill"></span>
             <span>HAPPY HOLIDAY DEALS ON EVERYTHING</span>
             <span class="bi bi-lightning-fill"></span>
-
         </div>
     </aside>
 
@@ -55,7 +77,7 @@
             </div>
         </div>
 
-        <div class="all-services">
+         <div class="all-services">
             <div class="service">
                 <div class=" bi bi-truck tag"></div>
                 <div class="service-cat">
@@ -86,16 +108,16 @@
                 </div>
             </div>
 
-        </div>
+        </div> 
         <hr>
 
 
-        <div class="new-collection">
+         <div class="new-collection">
             <p id="new">new Collection</p>
             <h1>Best Picks 2019 </h1>
             <p id="desc">Appear, dry there darkness they're seas, dry waters thing fly midst. Beast,
                 above fly brought Very green.</p>
-        </div>
+        </div> 
 
         <div class="dress-collecion">
             <div class="top">
@@ -119,20 +141,21 @@
                     <div>Shop Now <span class="bi bi-arrow-right"></span></div>
                 </div>
             </div>
-        </div>
+        </div> 
 
         <div class="top-month-seller">
             <h1>Top month Seller</h1>
             <div class="category">
-                <a class="cat-women" href="">Women</a>
-                <a href="">Men</a>
-                <a href="">kids</a>
+                <a class="cat-women" href="">Grocery</a>
+                <a href="">clothes</a>
+                <a href="">Stationary</a>
             </div>
-        </div>
+        </div> 
 
 
         <div class="all-shoping-items">
             <div class="row1">
+
                 <div class="card">
                     <div class="image1">
                         <div class="shortcut">
@@ -144,14 +167,13 @@
                     </div>
 
                     <div class="details">
-                        <span class="item-name">Shoes</span>
-                        <span class="item-desc">Lather mid-heel Sandals</span>
-                        <span class="item-price">$129.00</span>
+                        <span class="item-name">Nestle</span>
+                        <span class="item-desc">Nestle KitKat Chunky Choco Coated Wafer Bar, 40 g </span>
+                        <span class="item-price">11.00</span>
 
-                        <!--cart -->
-                        <button class="add-to-cart-btn btn btn-warning w-100 text-white  mt-3 mb-1" data-id="1"
-                            data-name="Lather mid-heel Sandals" data-price="129.00">Add to Cart</button>
-
+                        
+                        <button onclick="addToCart('KitKat Chocolate', 11)"
+                            class=" add-to-cart-btn btn btn-warning w-100 text-white mt-3 mb-1">Add to Cart</button>
                     </div>
                 </div>
 
@@ -166,11 +188,11 @@
                     </div>
 
                     <div class="details">
-                        <span class="item-name">Shoes</span>
-                        <span class="item-desc">Lather mid-heel Sandals</span>
-                        <span class="item-price">$129.00</span>
-                        <button class="add-to-cart-btn btn btn-primary w-100 text-white mt-3 mb-1" data-id="1"
-                            data-name="Lather mid-heel Sandals" data-price="129.00">Add to Cart</button>
+                        <span class="item-name">Coca Cola</span>
+                        <span class="item-desc">Oroginal Taste soft drink Refreshing</span>
+                        <span class="item-price">21.00</span>
+                        <button onclick="addToCart('Coca Cola', 21)"
+                            class=" add-to-cart-btn btn btn-warning w-100 text-white mt-3 mb-1">Add to Cart</button>
                     </div>
                 </div>
                 <div class="card">
@@ -184,11 +206,11 @@
                     </div>
 
                     <div class="details">
-                        <span class="item-name">Shoes</span>
-                        <span class="item-desc">Lather mid-heel Sandals</span>
-                        <span class="item-price">$129.00</span>
-                        <button class="add-to-cart-btn btn btn-primary w-100 text-white mt-3 mb-1" data-id="1"
-                            data-name="Lather mid-heel Sandals" data-price="129.00">Add to Cart</button>
+                        <span class="item-name">Haldiram's</span>
+                        <span class="item-desc">All in One</span>
+                        <span class="item-price">52.00</span>
+                      <button onclick="addToCart('All in One Bhujia', 52)"
+                            class=" add-to-cart-btn btn btn-warning w-100 text-white mt-3 mb-1">Add to Cart</button>
                     </div>
                 </div>
                 <div class="card">
@@ -203,17 +225,17 @@
                     </div>
 
                     <div class="details">
-                        <span class="item-name">Shoes</span>
-                        <span class="item-desc">Lather mid-heel Sandals</span>
-                        <span class="item-price">$129.00</span>
-                        <button class="add-to-cart-btn btn btn-primary w-100 text-white mt-3 mb-1" data-id="1"
-                            data-name="Lather mid-heel Sandals" data-price="129.00">Add to Cart</button>
+                        <span class="item-name">Amul</span>
+                        <span class="item-desc">Amul Ice Cream - Rajbhog Magic, 1 L Tub</span>
+                        <span class="item-price">102.00</span>
+                        <button onclick="addToCart('Amul Ice Cream', 102)"
+                            class=" add-to-cart-btn btn btn-warning w-100 text-white mt-3 mb-1">Add to Cart</button>
 
                     </div>
                 </div>
             </div>
 
-            <div class="row2">
+            <!-- <div class="row2">
                 <div class="card">
                     <div class="image5">
                         <div class="shortcut">
@@ -286,7 +308,7 @@
 
                     </div>
                 </div>
-            </div>
+            </div> -->
         </div>
 
         <!-- discover more  -->
@@ -297,10 +319,10 @@
             <h1>Get -50% from <br>
                 Summer Collection</h1>
             <button>Shop Now <span class="bi bi-arrow-right"></span></button>
-        </div>
+        </div> 
 
         <!-- What buyers say -->
-        <div class="buyers">
+         <div class="buyers">
             <p>What buyers say</p>
             <h1>Latest buyers Reviews</h1>
 
@@ -379,7 +401,7 @@
                 </div>
 
             </div>
-        </div>
+        </div> 
 
         <!-- four dot -->
         <div class="four-dot">
@@ -387,7 +409,7 @@
             <span class="bi bi-dot gray"></span>
             <span class="bi bi-dot gray"></span>
             <span class="bi bi-dot gray"></span>
-        </div>
+        </div> 
 
         <!-- @shopper -->
         <div class="some-more-items">
@@ -395,7 +417,7 @@
             <p>Appear, dry there darkness they're seas, dry waters.
             </p>
 
-            <div class="some-items">
+             <div class="some-items">
                 <div class="items-card sm1">
                     <span class="bi bi-heart"></span>
                     <span>248</span>
@@ -433,10 +455,10 @@
                     <span>7</span>
                 </div>
 
-            </div>
+            </div> 
 
             <!-- some brand  -->
-            <div class="some-brand">
+             <div class="some-brand">
                 <img src="images/brd-1.svg" width="120px" alt="">
                 <img src="images/brd-2.svg" alt="">
                 <img src="images/brd-3.svg" alt="">
@@ -444,7 +466,7 @@
                 <img src="images/brd-5.svg" alt="">
                 <img src="images/brd-6.svg" alt="">
                 <img src="images/brd-7.svg" alt="">
-            </div>
+            </div> 
         </div>
 
         <!-- footer  -->
@@ -516,23 +538,29 @@
                 </div>
             </div>
 
-        </footer>
+        </footer> 
 
     </section>
 
 
 
-    <!-- Bootstrap Bundle with Popper -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-
-    <!-- RazorPay JS -->
+    <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
     <script src="razor.js"></script>
-
-    <!-- Shopping Cart Script - MOVE THIS HERE -->
     <script src="shopping.js"></script>
-</body>
 
-</html>
+    <script>
+        function updateCartCount() {
+            const cart = JSON.parse(localStorage.getItem('cart')) || [];
+            document.getElementById('cart-count').textContent = cart.length;
+        }
+
+        updateCartCount();
+    </script>
+
+
+
+
 
 </body>
 

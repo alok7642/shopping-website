@@ -292,7 +292,7 @@ header {
     .image8 {
         height: 90%;
         width: 100%;
-        background-size: cover;
+        background-size:cover ;
         /* margin-bottom: 20px; */
     }
 
@@ -308,19 +308,23 @@ header {
     }
 
     .image1 {
-        background-image: url("images/tms-1.jpg");
+        background-image: url("images/kitkat.jpg");
+        background-size: cover;
+        height:400px;
+        width: 100%;
     }
 
     .image2 {
-        background-image: url("images/tms-2.jpg");
+        background-image: url("images/cocola.jpeg");
     }
 
     .image3 {
-        background-image: url("images/tms-3.jpg");
+        background-image: url("images/haldiram.png");
     }
 
     .image4 {
-        background-image: url("images/tms-4.jpg");
+                background-image: url("images/icecream.png");
+
     }
 
     .image5 {
@@ -339,17 +343,7 @@ header {
         background-image: url("images/tms-8.jpg");
     }
 
-    .image1:hover {
-        background-image: url("images/tmsh-1.png");
-    }
-
-    .image2:hover {
-        background-image: url("images/tmsh-2.png");
-    }
-
-    .image3:hover {
-        background-image: url("images/tmsh-3.png");
-    }
+   
 
     .image6:hover {
         background-image: url("images/tmsh-1.png");

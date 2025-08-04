@@ -1,4 +1,4 @@
-// ✅ Initialize EmailJS
+//  Initialize EmailJS
 emailjs.init("GF1Ub06TtsTNLXVW4");
 
 document.getElementById("email-form").addEventListener("submit", function (e) {

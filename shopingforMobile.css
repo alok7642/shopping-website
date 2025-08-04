@@ -1,21 +1,39 @@
 @media screen and (orientation: portrait) {
+    header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
 
-    .first,
-    .second,
-    .third {
+    .logo {
+        font-weight: bolder;
+        font-size: 500;
+        text-align: center;
+        color: red;
+
+    }
+
+    .nav {
         display: none;
     }
 
-    .port-1 , .port-2 {
+    .cart {
+        margin-top: -50px;
+    }
+
+    .port-1,
+    .port-2 {
         display: flex;
         justify-content: space-between;
         margin-top: 10px;
         padding: 10px;
     }
-    .port-1{
+
+    .port-1 {
         background-color: rgb(245, 235, 235);
     }
-    .bi-list{
+
+    .bi-list {
         font-size: 30px;
     }
 
@@ -39,12 +57,9 @@
         color: gold;
     }
 
-    .men,
-    .kids {
-        display: none;
-    }
+    
 
-    .women {
+    /* .women {
         background-image: url("images/women-fashion.jpg");
         height: 600px;
         width: 100%;
@@ -54,6 +69,47 @@
         justify-content: space-around;
         align-items: center;
         opacity: .9;
+    } */
+    .fashion .women {
+        background-image: url(images/women-fashion.jpg);
+       height: 600px;
+        width: 100%;
+        background-size: cover;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        opacity: .9;
+
+    }
+
+    .fashion .men {
+        background-image: url(images/men-fashion.jpg);
+        height: 600px;
+        width: 100%;
+        background-size: cover;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        opacity: .9;
+
+
+    }
+
+    .fashion .kids {
+        background-image: url(images/kids-fashion.jpg);
+        height: 600px;
+        width: 100%;
+        background-size: cover;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        opacity: .9;
+
+
+
     }
 
     .text {
@@ -69,7 +125,7 @@
         padding: 10px;
     }
 
-    .women:hover {
+    .women:hover, .men:hover, .kids:hover {
         opacity: 1;
         cursor: pointer
     }
@@ -125,7 +181,6 @@
 
     /* dress collection  */
     .dress-collecion {
-        /* margin-left: 280px; */
         margin-top: 90px;
     }
 
@@ -222,7 +277,7 @@
         margin-left: 10px;
     }
 
-    /* top month seller */
+    /* top month seller : product u can buy */
     .top-month-seller {
         text-align: center;
         margin: 90px 0 90px 0;
@@ -281,56 +336,38 @@
     }
 
     .image1 {
-        background-image: url("images/tms-1.jpg");
+        background-image: url("images/kitkat.jpg");
     }
 
     .image2 {
-        background-image: url("images/tms-2.jpg");
+        background-image: url("images/cocola.jpeg");
     }
 
     .image3 {
-        background-image: url("images/tms-3.jpg");
+        background-image: url("images/haldiram.png");
     }
 
     .image4 {
-        background-image: url("images/tms-4.jpg");
+        background-image: url("images/icecream.png");
     }
 
     .image5 {
-        background-image: url("images/tms-5.jpg");
+        background-image: url("images/kurkure.png");
     }
 
     .image6 {
-        background-image: url("images/tms-6.jpg");
+        background-image: url("images/lays.png");
     }
 
     .image7 {
-        background-image: url("images/tms-7.jpg");
+        background-image: url("images/maggie.png");
     }
 
     .image8 {
-        background-image: url("images/tms-8.jpg");
+        background-image: url("images/gulabzamun.jpg");
     }
 
-    .image1:hover {
-        background-image: url("images/tmsh-1.png");
-    }
-
-    .image2:hover {
-        background-image: url("images/tmsh-2.png");
-    }
-
-    .image3:hover {
-        background-image: url("images/tmsh-3.png");
-    }
-
-    .image6:hover {
-        background-image: url("images/tmsh-1.png");
-    }
-
-    .image7:hover {
-        background-image: url("images/tmsh-7.png");
-    }
+    
 
     .prop,
     .sale {
@@ -363,12 +400,12 @@
     .shortcut span {
         display: inline-block;
         margin-right: 10px;
-        height: 20px;
-        width: 20px;
+        height: 30px;
+        width: 30px;
         border-radius: 100%;
         background-color: white;
         color: black;
-        padding: 10px;
+        /* padding: 10px; */
         text-align: center;
 
     }
@@ -407,13 +444,15 @@
 
     /* discover more   */
     .discover {
-        font-weight: bold;
+        font-size: 25px;
+        font-weight: bolder;
         border-bottom: 2px solid rgb(65, 62, 62);
         width: 190px;
         margin-left: 30%;
         margin-bottom: 10%;
         display: flex;
         justify-content: center;
+        margin-top: 10%;
     }
 
     .discover:hover {
@@ -467,7 +506,7 @@
 
 
     .feedback-card {
-        height: 350px;
+        height: 450px;
         width: 300px;
         border: 1px solid rgb(226, 216, 216);
         padding: 20px;
@@ -571,7 +610,8 @@
     .items-card span {
         display: inline-block;
         margin-left: 10px;
-        color: rgb(103, 252, 44);
+        font-size: larger;
+        color: red;
 
     }
 
@@ -599,7 +639,7 @@
     footer {
         background-color: black;
         color: white;
-        height: 780px;
+        height: 840px;
         text-align: center;
         font-family: Arial, Helvetica, sans-serif;
         padding-top: 30px;
@@ -614,6 +654,7 @@
         padding: 20px 100px 20px 20px;
         background-color: gray;
         border: none;
+        border-radius: 10px;
     }
 
     input::placeholder {
@@ -628,6 +669,7 @@
         font-size: 20px;
         padding: 13px 20px 20px 20px;
         margin-left: 20px;
+        border-radius: 10px;
     }
 
     .input-el {
@@ -680,14 +722,13 @@
         grid-template-columns: 3fr 9fr;
         margin-top: 20px;
     }
-    .banking-card img{
+
+    .banking-card img {
         width: 50px;
     }
-    .copy{
+
+    .copy {
         text-align: left;
-    }
-
-
-
+      }
 
 }

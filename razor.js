@@ -6,9 +6,9 @@ function sendConfirmationEmail(name, email, totalAmount, productName, quantity) 
     quantity,
     amount: `₹${totalAmount.toFixed(2)}`
   }).then(() => {
-    console.log("✅ Email sent from Razorpay handler");
+    console.log("Email sent from Razorpay handler");
   }).catch((err) => {
-    console.error("❌ Email failed:", err);
+    console.error(" Email failed:", err);
   });
 }
 
@@ -40,7 +40,7 @@ function payNow() {
     handler: function (response) {
       sendConfirmationEmail(name, email, totalAmount, productName, quantity);
       localStorage.removeItem("cart");
-      alert("✅ Payment Successful and Email Sent!");
+      alert("Payment Successful and Email Sent!");
       window.location.href = "index.html";
     },
     prefill: { name, email },
